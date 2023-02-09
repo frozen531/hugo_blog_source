@@ -1,0 +1,17 @@
+baseURL = 'http://example.org/'
+languageCode = 'en-us'
+title = '浅浅的行迹'
+
+theme = "hugo-theme-stack"
+
+[markup]
+  [markup.highlight]
+    codeFences = true   #代码围栏功能
+    guessSyntax = true  #猜测语法，没有设置的话true会自动匹配语言
+    hl_Lines = ""       #高亮行号，一般不设置
+    lineNoStart = 1     #行号从1开始
+    lineNos = true      #是否显示行号
+    lineNumbersInTable = true  #使用表格式化行号和代码，一般置true
+    noClasses = true    
+    style = "github"    #主题风格
+    tabWidth = 4
