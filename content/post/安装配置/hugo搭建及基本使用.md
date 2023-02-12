@@ -30,19 +30,35 @@ ssh-keygen -t rsa
 ### 1.2 hugo
 [hugo](https://github.com/gohugoio/hugo/releases)，使用当前最新0.110.0版本，需要下载extend版本，我选的是hugo_extended_0.110.0_windows-amd64.zip。否则下载的主题无法渲染，提示```is not compatible with this Hugo version; run "hugo mod graph" for more info```。
 
-压缩包解压缩后将hugo.exe文件添加到系统环境变量中，cmd中hugo version可查看版本说明添加成功。
+压缩包解压缩后将hugo.exe文件添加到系统环境变量中，cmd中```hugo version```可查看版本说明添加成功。
 
-在想要写博客的位置创建04_hugo_blog文件夹生成站点，运行后会在04_hugo_blog生成相应的文件结构。基本操作如下：
-```bash
-// 创建04_hugo_blog
-hugo new site 04_hugo_blog
-```
-文件结构如下，content中放自己记录的blog，themes中放下载的主题，config.toml为配置文件，static放blog中用到的图片（直接放，不需要写路径，```![hugo目录结构](hugo_tree.bmp)```）。
+在想要写博客的位置创建04_hugo_blog文件夹生成站点，运行后会在04_hugo_blog生成相应的文件结构。文件结构如下，content中放自己记录的blog，themes中放下载的主题，config.toml为配置文件，static放blog中用到的图片（blog插入图片时，直接放，不需要写路径，```![hugo目录结构](hugo_tree.bmp)```）。
 
 ![hugo目录结构](hugo_tree.bmp)
 
+基本操作如下：
+```bash
+// 创建hugo站点：04_hugo_blog
+hugo new site 04_hugo_blog
+
+// 根文件04_hugo_blog下创建blog文件，自动创建到content中
+hugo new post/安装配置/Hugo搭建及基本使用.md
+```
+
+创建文件后会生成文件头信息，可以添加相应的多tags和categories，如下。
+
+```
+---
+title: "Hugo搭建及基本使用"
+date: 2023-02-05T10:57:37+08:00
+draft: true
+tags: ["hugo","配置"]
+categories: ["安装配置"]
+---
+```
+
 ### 1.3 主题下载
-[主题下载](https://themes.gohugo.io/)，需要下载你想要的主题到04_hugo_blog/themes/文件夹下，我选用的主题是[hugo-theme-stack](https://github.com/CaiJimmy/hugo-theme-stack)。主题直接clone下来后，有
+[主题下载](https://themes.gohugo.io/)，需要下载你想要的主题到04_hugo_blog/themes/文件夹下，我选用的主题是[hugo-theme-stack](https://github.com/CaiJimmy/hugo-theme-stack)，建议下载有搜索功能，分类的，方便修改。
 ```
 // 下载主题到themes
 git clone https://github.com/CaiJimmy/hugo-theme-stack.git themes/hugo-theme-stack
@@ -72,13 +88,13 @@ theme = "hugo-theme-stack"
 ```
 
 ## 3. 部署到github
-hugo是将编译后的文件上传到github上，并不需要上传源文件，所以需要将源文件和编译后的均上传。
+hugo是将编译后的文件上传到github上，并不需要上传源文件，为备份需要将源文件和编译后的均上传。
 
 ### 3.1 html部署
 github上新建仓库，命名需要注意usrname.github.io
 
 ```
-//指定aseUrl仓库地址，生成04_hugo_blog/public文件夹，将blog转成html文件
+//指定baseUrl仓库地址，生成04_hugo_blog/public文件夹，将blog转成html文件
 hugo --baseUrl="https://frozen531.github.io/" --buildDrafts
 
 //进入public，创建git仓库
