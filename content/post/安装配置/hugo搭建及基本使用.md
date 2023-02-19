@@ -118,7 +118,10 @@ git push -u origin master
 
 ### 3.2 源文件备份
 源文件备份到github，创建新的仓库。04_hugo_blog文件夹下```git init```，因为.git仓库不能嵌套，themes主题中的.git需要删除，pulbic中的.git可以通过创建.gitignore文件忽略。
-
+```
+# 忽略 public/ 文件夹下的所有文件
+public/
+```
 
 ## 4. 参考文章
 1. [Git的环境配置（超详细）](https://blog.csdn.net/shuang_waiwai/article/details/121108964)
