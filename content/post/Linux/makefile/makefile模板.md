@@ -13,7 +13,7 @@ categories: ["Linux"]
 CC = $(CROSS_COMPILE)gcc
 
 # 路径
-WORK_DIR:=$(DSP_WORK_PATH)/work
+WORK_DIR:=$(WORK_PATH)/work
 
 # 头文件
 INC_DIR := -I$(WORK_DIR)/inc
