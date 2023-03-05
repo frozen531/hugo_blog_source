@@ -59,7 +59,29 @@ echo [选项] [输出内容]
 
 ### 2.2 指定输出字符颜色
 
+```bash
+#基本格式
+echo -e "\033[字背景颜色; 文字颜色m字符串\033[0m"
 
+#\033可用\e来代替，\e[0m用来恢复默认
+echo -e "\e[字背景颜色; 文字颜色m字符串\e[0m"
+
+#字体颜色值如下
+#红色 \e[1;31m
+#绿色 \e[1;32m
+#黄色 \e[1;33m
+#蓝色 \e[1;34m
+#粉色 \e[1;35m
+#默认 \e[0m
+
+#可使用变量代替
+COLOR_OK="\e[1;31m"
+COLOR_FAILED="\e[1;33m"
+COLOR_DEF="\e[0m"
+
+echo -e "$COLOR_OK excute ok! $COLOR_DEF"
+echo -e "$COLOR_FAILED excute failed! $COLOR_DEF"
+```
 
 ## 3. Shell脚本的执行方式
 `hello.sh`文件如下：

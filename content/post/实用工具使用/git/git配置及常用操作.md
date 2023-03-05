@@ -87,7 +87,7 @@ git rm file
 git reset --soft HEAD~
 ```
 
-## 6. 文件重命名
+## 6. 文件重命名与位置移动
 ```
 git mv old_file_name new_file_name
 ```
