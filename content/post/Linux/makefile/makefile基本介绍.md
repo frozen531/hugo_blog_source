@@ -15,6 +15,11 @@ categories: ["Linux"]
 
 makefile文件的命名通常为`makefile`和`Makefile`，但也可以是其他任意名字，但要通过`-f`执行。
 
+```bash
+[root@bogon 05_static]# make -f makefile_path
+[root@bogon 05_static]# make clean -f makefile_path
+```
+
 ### 2.2 基本格式
 ```c
 目标:依赖
