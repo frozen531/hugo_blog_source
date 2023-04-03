@@ -77,7 +77,7 @@ YUV存储信息有两种格式：
  /| YUV422 | YUV420 
 ---|---|---
 packed | YUYV、UYUV | /
-P类型 | YUV422P |YV12、YU12
+P类型 | YUV422P |YU12(I420)、YV12
 SP类型 | / |NV12、NV21
 
 ### YUV422：YUYV/UYVY/YUV422P
@@ -138,3 +138,4 @@ B = Y + 2.03U
 8. [YUV内存里的存放顺序](https://blog.csdn.net/m0_60259116/article/details/125434762?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522168026760216800182189601%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=168026760216800182189601&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-4-125434762-null-null.blog_rank_default&utm_term=YUV&spm=1018.2226.3001.4450)
 9. [YUV采样方式与存储格式](https://blog.csdn.net/m0_60259116/article/details/126728385?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522168026760216800182189601%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fblog.%2522%257D&request_id=168026760216800182189601&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~blog~first_rank_ecpm_v1~rank_v31_ecpm-3-126728385-null-null.blog_rank_default&utm_term=YUV&spm=1018.2226.3001.4450)
 10. [MATLAB：RGB转BT601、BT709协议中各种YUV格式的转换函数](https://blog.csdn.net/llljjlj/article/details/115052159?ops_request_misc=%257B%2522request%255Fid%2522%253A%2522167619676016782427473261%2522%252C%2522scm%2522%253A%252220140713.130102334.pc%255Fall.%2522%257D&request_id=167619676016782427473261&biz_id=0&utm_medium=distribute.pc_search_result.none-task-blog-2~all~first_rank_ecpm_v1~rank_v31_ecpm-7-115052159-null-null.142%5Ev73%5Einsert_down3,201%5Ev4%5Eadd_ask,239%5Ev1%5Econtrol&utm_term=colorspaceconversion&spm=1018.2226.3001.4187)
+11. [图像的表示（2）：YCbCr 怎么来的？必看这篇颜色空间发展简史丨音视频基础](https://mp.weixin.qq.com/s?__biz=MjM5MTkxOTQyMQ==&mid=2257484448&idx=1&sn=a245b5a178f173489e730a0bac4c7b9c&chksm=a5d4e6f292a36fe4b79063ad93b4df175e2f0f460e03162370934683bc69519fed5cf998f864&scene=178&cur_album_id=2140155659944787969#rd)
