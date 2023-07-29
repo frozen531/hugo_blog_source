@@ -32,9 +32,15 @@ ssh-keygen -t rsa
 
 压缩包解压缩后将hugo.exe文件添加到系统环境变量中，cmd中```hugo version```可查看版本说明添加成功。
 
-在想要写博客的位置创建04_hugo_blog文件夹生成站点，运行后会在04_hugo_blog生成相应的文件结构。文件结构如下，content中放自己记录的blog，themes中放下载的主题，config.toml为配置文件，static放blog中用到的图片（blog插入图片时，直接放，不需要写路径，```![hugo目录结构](hugo_tree.bmp)```）。
+在想要写博客的位置创建04_hugo_blog文件夹生成站点，运行后会在04_hugo_blog生成相应的文件结构。文件结构如下，content中放自己记录的blog，themes中放下载的主题，config.toml为配置文件，static放blog中用到的图片，目录结构如下：
 
 ![hugo目录结构](hugo_tree.bmp)
+
+图片插入有两种方式：
+1. 图片直接放在static中。（blog插入图片时，直接放，不需要写路径，```![hugo目录结构](hugo_tree.bmp)```）
+2. static中键文件夹，对应放入。blog插入图片时，需要写路径，```![图片显示.bmp](hugo/图片显示.bmp)```）
+
+![图片显示.bmp](hugo/图片显示.bmp)
 
 基本操作如下：
 ```bash
